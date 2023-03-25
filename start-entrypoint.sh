@@ -2,5 +2,5 @@
 
 set -e
 
-python deploy/Private/app.py &
-python deploy/Public/app.py
+cd deploy/Private/ && python app.py &
+cd deploy/Public/ && python app.py
