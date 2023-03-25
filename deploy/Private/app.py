@@ -632,4 +632,9 @@ ip = [
 interface = gradio.Interface(fn=upload_pdf, inputs=ip, outputs="html", title=title, description=description)
 
 # 运行Gradio应用程序
-interface.launch()
+interface.launch(
+    server_name="0.0.0.0",
+    server_port=7860,
+    share=False,
+    debug=True,
+    )
