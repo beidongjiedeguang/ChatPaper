@@ -6,7 +6,8 @@ container = chatgpt_paper_container
 start:
 	docker run -itd --name=$(container) \
 	-p 7860:7860 -p 7861:7861 \
-	-v $(shell pwd):/root/ \
+	-v $(shell pwd):/root/chatpaper/ \
+	-w /root/chatpaper \
 	$(image) 
 
 log:
